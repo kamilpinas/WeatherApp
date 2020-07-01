@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WeatherActivity">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh_items"
+        android:layout_width="0dp"
+        android:layout_height="729dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:layout_editor_absoluteX="1dp">
+
+
+            <TextView
+                android:id="@+id/textInternetState"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/kolorek2"
+                android:text="Internet connection required"
+                android:textAlignment="center"
+                android:textColor="@color/bialy"
+                android:textSize="20dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textCity"
+                style="@style/text2"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:layout_weight="1"
+                android:text="City"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageViewIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="TODO"></ImageView>
+
+            <TextView
+                android:id="@+id/textTime"
+                style="@style/text2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Time"
+                android:textColor="#0F2E47" />
+
+            <TextView
+                android:id="@+id/textView39"
+                style="@style/text1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Temp" />
+
+            <TextView
+                android:id="@+id/textCurrentTemp"
+                style="@style/text2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/textView44"
+                style="@style/text1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Pressure" />
+
+            <TextView
+                android:id="@+id/textPressure"
+                style="@style/text2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/textView46"
+                style="@style/text1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Humidity" />
+
+            <TextView
+                android:id="@+id/textHumidity"
+                style="@style/text2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/textView48"
+                style="@style/text1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Temp min" />
+
+            <TextView
+                android:id="@+id/textMinTemp"
+                style="@style/text2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/textView50"
+                style="@style/text1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Temp max" />
+
+            <TextView
+                android:id="@+id/textMaxTemp"
+                style="@style/text2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+        </LinearLayout>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+</androidx.constraintlayout.widget.ConstraintLayout>
